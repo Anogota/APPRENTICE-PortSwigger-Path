@@ -50,3 +50,21 @@ Now we need to trafic into this /administrator-panel
 We now, on the administrator-panel without any rights and can delate users, after when you delete the user carlos you can see:
 
 Congratulations, you solved the lab!
+
+Lab: Unprotected admin functionality with unpredictable URL
+
+When we access into this website, check the source code, there we can see something intresting:
+
+![obraz](https://github.com/Anogota/APPRENTICE-PortSwigger-Path/assets/143951834/7188db92-f669-4d6e-a5c8-b225829e0933)
+
+is this a admin panel, let's check this out.
+Yep, we are admin, and we can delete ths carlos user
+
+Lab: User role controlled by request parameter
+
+We need to intercept the traffic with burp suite, and if you right way admin=false chance it admin=true, and you can get your admin rights
+And go into admin panel and delete carlos
+
+![obraz](https://github.com/Anogota/APPRENTICE-PortSwigger-Path/assets/143951834/3b801475-c427-4ec4-a02c-b62e6916168b)
+
+you need to only change this paramiter from false to true 
